@@ -14,7 +14,7 @@ class Project
   def backers
     backer_array = []
     ProjectBacker.all.collect do |project|
-      if backer.project==self
+      if backer.project == self
         backer_array << backer.backer
       end
     end
