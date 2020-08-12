@@ -12,13 +12,13 @@ class Project
     ProjectBacker.new(self, backer)
   end
   def backers
-    backer_array = []
-    ProjectBacker.all.collect do |project|
-      if backer.project == self
-        backer_array << backer.backer
-      end
+        array = []
+        ProjectBacker.all.collect do |backer|
+          if backer.project == self  
+            array << backer.backer
+          end 
+        end 
+        array 
     end
-    backer_array
-  end
   
 end
