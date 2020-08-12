@@ -1,5 +1,5 @@
 class ProjectBacker
-  attr_accessor :project, :backer 
+  attr_reader :project, :backer 
   @@all = []
   def initialize(project, backer)
     @project = project
