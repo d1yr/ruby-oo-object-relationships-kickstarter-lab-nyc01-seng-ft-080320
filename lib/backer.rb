@@ -12,12 +12,12 @@ class Backer
     ProjectBacker.new(project, self)
   end
   def backed_projects
-    project_array = []
+    array = []
     ProjectBacker.all.collect do |project|
       if project.backer==self
-        project_array << project.project
+        array << project.project
       end
     end
-    project_array
+    array
   end
 end
